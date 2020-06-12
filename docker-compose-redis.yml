@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  redis:
+    image: sameersbn/redis
+    ports:
+      - '6379:6379'
+    volumes:
+    - /Users/LEO/Documents/project/docker/file/redis/:/var/lib/redis:Z

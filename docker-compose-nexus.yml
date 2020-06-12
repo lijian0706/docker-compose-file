@@ -1,0 +1,8 @@
+version: '2'
+services:
+  feitian-nexus: 
+    image: sonatype/nexus3
+    volumes:
+    - /opt/docker/nexus-data:/nexus-data
+    ports:
+    - "10000:8081"

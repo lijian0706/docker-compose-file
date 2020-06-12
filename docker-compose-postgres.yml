@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  postgres1:
+    image: sameersbn/postgresql:9.6-2
+    volumes:
+    - /Users/LEO/Documents/project/docker/file/postgres/auth:/var/lib/postgresql:Z
+    environment:
+    - DEBUG=false
+    - DB_USER=lijian
+    - DB_PASS=lijian
+    - DB_NAME=auth
+    ports:
+    - "5432:5432"

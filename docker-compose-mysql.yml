@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mysql:
+    environment:
+      MYSQL_ROOT_PASSWORD: 'mysql'
+      MYSQL_USER: 'mysql'
+      MYSQL_PASS: 'mysql'
+    image: "docker.io/mysql:latest" 
+    restart: always
+    ports:
+    - "13306:3306"
+    volumes:
+    - "/Users/LEO/Documents/project/docker/file/mysql/db:/var/lib/mysql"
+    - "/Users/LEO/Documents/project/docker/file/mysql/conf/my.cnf:/etc/my.cnf"
+    - "/Users/LEO/Documents/project/docker/file/mysql/init:/docker-entrypoint-initdb.d/"

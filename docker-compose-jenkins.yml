@@ -1,0 +1,11 @@
+version: '3'
+services:
+  docker_jenkins:
+    restart: always
+    image: jenkins/jenkins:lts
+    container_name: docker_jenkins
+    ports:
+      - '7070:8080'
+      - '40000:50000'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
